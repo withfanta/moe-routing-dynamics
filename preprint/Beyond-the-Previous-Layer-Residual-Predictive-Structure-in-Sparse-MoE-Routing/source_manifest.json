@@ -1,0 +1,114 @@
+{
+  "repository": "https://github.com/withfanta/moe-routing-dynamics",
+  "source_commit": "febc169a08827239e0e2057a4f81915cfbcc4aba",
+  "sources": [
+    {
+      "path": "code/experiments/03_eipc/PACKAGING_PROVENANCE.md",
+      "sha256": "81ee0d75ae13d2587d6cbe80876df0fbeee7024f68f23d0e7769f43408b1ee60"
+    },
+    {
+      "path": "code/experiments/03_eipc/artifacts/EIPC_P0/RESULTS.md",
+      "sha256": "8c970714a102ee46334e01d51548fa25b5186fb3e94301b571808468e25f8ebc"
+    },
+    {
+      "path": "code/experiments/03_eipc/artifacts/EIPC_P0/results.json",
+      "sha256": "c1fd283a2d76b4d99b3f926d3d640f089f9d09fa858de8ba67aaa151bfc03872"
+    },
+    {
+      "path": "code/experiments/03_eipc/protocols/EIPC_P0_PREREGISTRATION.md",
+      "sha256": "3fd9744518919767171031d72ba8c82203c7d9b9a52eb666ed62731e463fdc27"
+    },
+    {
+      "path": "code/experiments/04_xec/PACKAGING_PROVENANCE.md",
+      "sha256": "95c62cf7a7fde3284ecfe163b4b7ef371865a6fecaab2e859bb74adf6e8a2ce0"
+    },
+    {
+      "path": "code/experiments/04_xec/artifacts/XEC_P0/RESULTS.md",
+      "sha256": "1be7974c24c71898e126b892e43bb5e59de46b53ac2e563cd9b30111c213a381"
+    },
+    {
+      "path": "code/experiments/04_xec/artifacts/XEC_P0/results.json",
+      "sha256": "defca1eb64ba8485c0a51ecccfb61ea9bb5a79e47395562097a4ec87367d9f24"
+    },
+    {
+      "path": "code/experiments/04_xec/protocols/XEC_P0_PREREGISTRATION.md",
+      "sha256": "bd5f5e932802474ddb3f9895bffc1eb797d945a14558f01a42ea4c4d20081d9b"
+    },
+    {
+      "path": "code/experiments/05_epd/PACKAGING_PROVENANCE.md",
+      "sha256": "64a1f5a509cdbbb5f929586a3d343fd53a8d228814a95df95b903262cffcdd44"
+    },
+    {
+      "path": "code/experiments/05_epd/artifacts/EPD_P0/RESULTS.md",
+      "sha256": "d662104ec00b998056260270402e28bddcdff62065f35a46db04f5ffd74aa89b"
+    },
+    {
+      "path": "code/experiments/05_epd/artifacts/EPD_P0/results.json",
+      "sha256": "4ec18e5880d98227bebc7a9fa67ff5fd708047111cf5904c69174db9dcd5094b"
+    },
+    {
+      "path": "code/experiments/05_epd/protocols/EPD_P0_PROTOCOL.md",
+      "sha256": "511e0e7e501d58fb02175342d617ec3f5adecc58bc444797842c44133997358a"
+    },
+    {
+      "path": "code/experiments/06_rmo/PACKAGING_PROVENANCE.md",
+      "sha256": "6f052d6e361b31209e764499ebd7147cb6cdd940d789a87abf0dc7e7e7e03ddf"
+    },
+    {
+      "path": "code/experiments/06_rmo/artifacts/RESULTS.md",
+      "sha256": "3410c773e7f89183d374808a2f468cf72e8d607d834274c6d4ee4d60ead6d877"
+    },
+    {
+      "path": "code/experiments/06_rmo/artifacts/results.json",
+      "sha256": "00e1853b8aaf12d45eea0c86309f9c1e5542daa8acb57febce031e6e3d181ff4"
+    },
+    {
+      "path": "code/experiments/06_rmo/protocol.md",
+      "sha256": "43c808137b716adc0da58c4d9528d688c6d5b5e5ebc84b3372a8fdb722c86050"
+    },
+    {
+      "path": "code/experiments/07_rmc/PACKAGING_PROVENANCE.md",
+      "sha256": "39b5dc7c34df453e8e63486c64a31ccc3771e7daaee9ed655f1d4b0e84c9d8c0"
+    },
+    {
+      "path": "code/experiments/07_rmc/artifacts/RESULTS.md",
+      "sha256": "d994d871b4ffe42c3637b7c0ad280475dc873c063fe1c4419a2c0b127766c084"
+    },
+    {
+      "path": "code/experiments/07_rmc/artifacts/results.json",
+      "sha256": "595ee0b98ed70bd5a9758e8ede0042ac1ab7ccaef3192f8c44077584795c0851"
+    },
+    {
+      "path": "code/experiments/07_rmc/artifacts/router_identification.json",
+      "sha256": "9f12b71a07e8f693b6a2427ef6f5f0a5ac5b6837cdfc2c70dce7b87b0449bd9a"
+    },
+    {
+      "path": "code/experiments/07_rmc/protocol.md",
+      "sha256": "d5742e33a7a18a637c106c654b644d63f8625b9101087805ca6b814a9e3d4b37"
+    },
+    {
+      "path": "code/experiments/08_nhd/PACKAGING_PROVENANCE.md",
+      "sha256": "3444181c9bbd4331b3fada133dcccd0f5c4e666b1b2c5334f15082da956f70a8"
+    },
+    {
+      "path": "code/experiments/08_nhd/analyze.py",
+      "sha256": "a5e8155e52a6af2889aefcf9b35119c4fa16c751369d277a16fc829318592644"
+    },
+    {
+      "path": "code/experiments/08_nhd/artifacts/RESULTS.md",
+      "sha256": "edf4fee63ed065a37f5254310a70145cdfcd6f49143ed39a1ce8691f750daced"
+    },
+    {
+      "path": "code/experiments/08_nhd/artifacts/results.json",
+      "sha256": "821fa649f96ecd68e22b942942a931f9dbe4ddf6f4cf2fac3562b577d9096330"
+    },
+    {
+      "path": "code/experiments/08_nhd/protocol.md",
+      "sha256": "d8fe98d03cf684a4bb76ade0d68cdd8b8bde30883ce0b9b6cd55fbe58a0864fe"
+    },
+    {
+      "path": "preprint/The Yale arXiv Paper Template/yalearxiv.cls",
+      "sha256": "c4bba99158c5245cfd72c790037704a5acdbd6cb681e41d8e9b2d76bba074de2"
+    }
+  ]
+}

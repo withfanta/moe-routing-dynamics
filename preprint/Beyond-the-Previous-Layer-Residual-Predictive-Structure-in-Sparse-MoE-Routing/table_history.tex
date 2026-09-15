@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering\small
+\caption{\textbf{History improves prediction beyond the previous layer.} Top: held-out $R^2$ for nested history windows; $k$ includes the immediately preceding layer. Middle: OLMoE gains over $k=1$ and between consecutive windows. Bottom: JetMoE gains, with 95\% paired bootstrap intervals for the preregistered $k=4$ comparison (10,000 resamples). Dashes denote unavailable windows.}
+\label{tab:history}
+\begin{tabular}{lrrrrr}
+\toprule
+Model / target & $k=1$ & $k=2$ & $k=4$ & $k=8$ & $k=11$\\
+\midrule
+OLMoE / L12 & 0.59879 & 0.62320 & 0.64705 & 0.66265 & 0.66544 \\
+JetMoE / L12 & 0.20924 & 0.34982 & 0.35199 & 0.38275 & -- \\
+JetMoE / L20 & 0.13898 & 0.24936 & 0.34425 & 0.35463 & -- \\
+\midrule
+OLMoE cumulative gain & -- & 0.02441 & 0.04826 & 0.06387 & 0.06665 \\
+OLMoE stepwise gain & -- & 0.02441 & 0.02385 & 0.01561 & 0.00279 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tabular}{lrrrr}
+\toprule
+JetMoE target & $\Delta_2$ & $\Delta_4$ & $\Delta_8$ & 95\% CI for $\Delta_4$\\
+\midrule
+L12 & 0.14057 & 0.14275 & 0.17351 & [0.10998, 0.17916] \\
+L20 & 0.11038 & 0.20528 & 0.21565 & [0.16891, 0.24396] \\
+\bottomrule
+\end{tabular}
+\end{table*}

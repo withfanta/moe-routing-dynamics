@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering\small
+\caption{\textbf{Nonlinear decoding preserves the historical advantage (NHD).} Raw-state ridge scores and MLP scores for all three initialization seeds. $A$ is the recent-only MLP gain over recent-only ridge; $B$ is the history MLP gain over the recent-only MLP; $B_{\mathrm{matched}}$ uses the parameter-matched recent-only MLP. Residual scores predict $\epsilon_Y$ from $\epsilon_H$ and use a different target from the joint prediction scores. The permutation control shuffles TEST history residuals with the fitted residual probe held fixed.}
+\label{tab:nonlinear}
+\begin{tabular}{llrrrrr}
+\toprule
+Target & Decoder / input & Parameters & Seed 42 & Seed 123 & Seed 2026 & Mean / fixed\\
+\midrule
+L12 & Ridge / $R$ & -- & -- & -- & -- & 0.20972 \\
+L12 & Ridge / $[H;R]$ & -- & -- & -- & -- & 0.37188 \\
+L12 & MLP / $R$ & 552 & 0.20871 & 0.21206 & 0.21257 & 0.21111 \\
+L12 & Matched MLP / $R$ & 1,317 & 0.22051 & 0.21742 & 0.21633 & 0.21809 \\
+L12 & MLP / $[H;R]$ & 1,320 & 0.38018 & 0.38677 & 0.38051 & 0.38249 \\
+\midrule
+L20 & Ridge / $R$ & -- & -- & -- & -- & 0.13948 \\
+L20 & Ridge / $[H;R]$ & -- & -- & -- & -- & 0.35382 \\
+L20 & MLP / $R$ & 552 & 0.14678 & 0.15214 & 0.14760 & 0.14884 \\
+L20 & Matched MLP / $R$ & 1,317 & 0.14602 & 0.15210 & 0.14688 & 0.14834 \\
+L20 & MLP / $[H;R]$ & 1,320 & 0.36819 & 0.36339 & 0.37078 & 0.36745 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{tabular}{lrrrrrr}
+\toprule
+Target & Linear gain & $A$ & $B$ & $B_{\mathrm{matched}}$ & Residual $R^2$ & Permuted $R^2$\\
+\midrule
+L12 & 0.16216 & 0.00139 & 0.17137 & 0.16440 & 0.20549 & -0.33325 \\
+L20 & 0.21434 & 0.00936 & 0.21861 & 0.21912 & 0.23556 & -0.32149 \\
+\bottomrule
+\end{tabular}
+\end{table*}

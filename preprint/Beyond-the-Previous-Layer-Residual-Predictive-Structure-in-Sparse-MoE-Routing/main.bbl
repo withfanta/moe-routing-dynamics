@@ -1,0 +1,69 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cai et~al.(2024)Cai, Ro, Kim, Wang, Bejnordi, Akella, and
+  Wang]{readme}
+Ruisi Cai, Yeonju Ro, Geon-Woo Kim, Peihao Wang, Babak~Ehteshami Bejnordi,
+  Aditya Akella, and Zhangyang Wang.
+\newblock {Read-ME: Refactorizing LLMs as Router-Decoupled Mixture of Experts
+  with System Co-Design}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2410.19123}.
+
+\bibitem[Qiu et~al.(2025)Qiu, Huang, Cheng, Zhou, Wang, Titov, and Fu]{rmoe}
+Zihan Qiu, Zeyu Huang, Shuang Cheng, Yizhi Zhou, Zili Wang, Ivan Titov, and Jie
+  Fu.
+\newblock {Layerwise Recurrent Router for Mixture-of-Experts}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2408.06793}.
+
+\bibitem[Gu et~al.(2026)Gu, Likhomanenko, Thilak, Ramapuram, and
+  Jaitly]{pathmoe}
+Zijin Gu, Tatiana Likhomanenko, Vimal Thilak, Jason Ramapuram, and Navdeep
+  Jaitly.
+\newblock {Path-Constrained Mixture-of-Experts}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2603.18297}.
+
+\bibitem[Labzin et~al.(2026)Labzin, Kulibaba, Dzhalilov, and
+  Gorokhov]{geometry}
+Kirill Labzin, Stepan Kulibaba, Artem Dzhalilov, and Artem Gorokhov.
+\newblock {Evidence for Shared Routing Geometry and Dynamics in Sparse
+  Mixture-of-Experts}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2609.02404}.
+
+\bibitem[He et~al.(2026)He, Lin, Liu, Cheng, Lu, and Gong]{esrl}
+Hongyi He, Zhenghao Lin, Xiao Liu, Peng Cheng, Yan Lu, and Yeyun Gong.
+\newblock {Expert-Space Exploration in MoE Reinforcement Learning}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2609.13058}.
+
+\bibitem[Lin et~al.(2026)Lin, Wan, and Wang]{hero}
+Hongjin Lin, Wentao Wan, and Keze Wang.
+\newblock {Do Dynamic Routers Need Memory? HeRo: History-Aware Routing for
+  Efficient LLM Inference}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2609.08189}.
+
+\bibitem[Muennighoff et~al.(2025)Muennighoff, Soldaini, Groeneveld, Lo,
+  Morrison, Min, Shi, Walsh, Tafjord, Lambert, Gu, Arora, Bhagia, Schwenk,
+  Wadden, Wettig, Hui, Dettmers, Kiela, Farhadi, Smith, Koh, Singh, and
+  Hajishirzi]{olmoe}
+Niklas Muennighoff, Luca Soldaini, Dirk Groeneveld, Kyle Lo, Jacob Morrison,
+  Sewon Min, Weijia Shi, Pete Walsh, Oyvind Tafjord, Nathan Lambert, Yuling Gu,
+  Shane Arora, Akshita Bhagia, Dustin Schwenk, David Wadden, Alexander Wettig,
+  Binyuan Hui, Tim Dettmers, Douwe Kiela, Ali Farhadi, Noah~A. Smith, Pang~Wei
+  Koh, Amanpreet Singh, and Hannaneh Hajishirzi.
+\newblock {OLMoE: Open Mixture-of-Experts Language Models}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2409.02060}.
+
+\bibitem[Shen et~al.(2024)Shen, Guo, Cai, and Qin]{jetmoe}
+Yikang Shen, Zhen Guo, Tianle Cai, and Zengyi Qin.
+\newblock {JetMoE: Reaching Llama2 Performance with 0.1M Dollars}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2404.07413}.
+
+\bibitem[Merity et~al.(2016)Merity, Xiong, Bradbury, and Socher]{wikitext}
+Stephen Merity, Caiming Xiong, James Bradbury, and Richard Socher.
+\newblock {Pointer Sentinel Mixture Models}, 2016.
+\newblock URL \url{https://arxiv.org/abs/1609.07843}.
+
+\end{thebibliography}
