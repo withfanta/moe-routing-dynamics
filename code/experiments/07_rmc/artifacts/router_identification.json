@@ -1,0 +1,11 @@
+{
+  "experiment": "RMC-P0",
+  "device": "Tesla V100-SXM2-32GB",
+  "n_blocks_checked": 24,
+  "max_abs_diff_vs_recomputed_mlp_router_logits": 0.0,
+  "min_abs_diff_vs_moa_router_logits": 0.7412109375,
+  "topk_identity_logit_agreement": 1.0,
+  "single_gpu_fp16_load": true,
+  "gib_allocated": 15.930072784423828,
+  "builtin_output_router_logits_status": "raises AttributeError in transformers 4.45.1 (JetMoeForCausalLM has no attribute num_experts); path unused by design"
+}

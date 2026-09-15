@@ -1,0 +1,43 @@
+{
+  "source_experiment": "RMC-P0",
+  "source_dir": "/home/h-li/work/routing_memory_crossmodel",
+  "source_head": "cc60edd",
+  "source_clean": true,
+  "hashes": {
+    "artifacts/merged.npz": "7dafe8048772937c239bf9ab61577d9cce648847af4a6227e4ca5d86a9758726",
+    "artifacts/data_manifest.json": "371601f7ef6c491d571b1528fb15ef5dcd8cd361844786aee9fc8c4aef8afe02",
+    "artifacts/model_provenance.json": "e26d8ec79271f1312baad4c7993b6bd153d69f5426abb104221cae9e25585335",
+    "artifacts/results.json": "595ee0b98ed70bd5a9758e8ede0042ac1ab7ccaef3192f8c44077584795c0851"
+  },
+  "arrays_present": [
+    "ids",
+    "logits",
+    "is_test"
+  ],
+  "experiment": "NHD-P0",
+  "matched_width": 77,
+  "matched_params": 1317,
+  "history_params": 1320,
+  "param_diff": 3,
+  "pinned_source_commit": "cc60edd",
+  "no_new_inference": true,
+  "gpu_used": false,
+  "variables": {
+    "L12": {
+      "recent_layer": 11,
+      "history_layers": [
+        8,
+        9,
+        10
+      ]
+    },
+    "L20": {
+      "recent_layer": 19,
+      "history_layers": [
+        16,
+        17,
+        18
+      ]
+    }
+  }
+}

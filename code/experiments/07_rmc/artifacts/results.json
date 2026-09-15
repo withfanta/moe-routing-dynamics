@@ -1,0 +1,181 @@
+{
+  "experiment": "RMC-P0",
+  "title": "Routing Memory Cross-Model Pilot",
+  "model_id": "jetmoe/jetmoe-8b",
+  "model_revision": "d8fd02ccf7911aa8148a63c7984ffd2e465b0352",
+  "implementation": "transformers.models.jetmoe (official in-tree)",
+  "implementation_version": "4.45.1",
+  "implementation_file_sha256": "2f02f04ef4ce3da366bd7ee58da4d922968fba949e9aeb82e9a9201898531a20",
+  "router_studied": "MLP MoE router only (model.layers[i].mlp.router)",
+  "moa_router_used": false,
+  "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "data_manifest_sha256": "371601f7ef6c491d571b1528fb15ef5dcd8cd361844786aee9fc8c4aef8afe02",
+  "fingerprints": {
+    "fit": "7951ab9004769a2c923ed1a0f21fd64784743eed5f42a4789178601e72337a6e",
+    "test": "c4441a9beaf2583ed7327e9c289e11ab17631a06e3675c370d178507a3c1abd7"
+  },
+  "shard_sha256": {
+    "shard_0": "dd568f2cd45b672412b17737587ded68529d94f5b40b34d6263d22eb52d2deb3",
+    "shard_1": "e8d3bd8db2a6ee8319f9d5b4bdf9e20397963662456c40b543f853b348dff711",
+    "shard_2": "0562f82bb8ddf0df97b3e23425dc6fef6cc1380060d27aed2657646f8323fabf",
+    "shard_3": "06f1b3cae0e568b66992028b9f5cc6d51b39cb5716674a6cbec1c47505fa317b"
+  },
+  "n_fit": 512,
+  "n_test": 256,
+  "target_layers": [
+    12,
+    20
+  ],
+  "k_values": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "primary_comparison": "k=1 vs k=4",
+  "probe": "sklearn.linear_model.Ridge(alpha=1.0), multi-output",
+  "feature_dim": 16,
+  "compression": "StandardScaler -> PCA(8, randomized, random_state=20260920) -> StandardScaler, fit on FIT only",
+  "target": "native MLP router logits, per-sample centred, FIT-standardized",
+  "input": "8-d binary native Top-2 MLP selection indicator per layer, identities only",
+  "delta4_threshold": 0.02,
+  "per_target": {
+    "12": {
+      "R2": {
+        "k1": 0.20924331869852142,
+        "k2": 0.3498168615714327,
+        "k4": 0.3519910809450162,
+        "k8": 0.3827523303423158
+      },
+      "Delta4": 0.14274776224649477,
+      "Delta2": 0.1405735428729113,
+      "Delta8": 0.1735090116437944,
+      "Step2": 0.1405735428729113,
+      "Step4": 0.0021742193735834747,
+      "Step8": 0.030761249397299628,
+      "bootstrap_Delta4": {
+        "ci_low": 0.10997712350500609,
+        "ci_high": 0.17915683678510735,
+        "mean": 0.14368217200078548,
+        "median": 0.14340305431588374,
+        "frac_above_zero": 1.0,
+        "n_resamples": 10000,
+        "seed": 314159
+      },
+      "older_raw_dims": {
+        "k1": 0,
+        "k2": 8,
+        "k4": 24,
+        "k8": 56
+      },
+      "pca_evr": {
+        "k1": NaN,
+        "k2": 1.0000000000000049,
+        "k4": 0.5734769116424953,
+        "k8": 0.365959142710084
+      },
+      "history_layers": {
+        "k1": [
+          11
+        ],
+        "k2": [
+          10,
+          11
+        ],
+        "k4": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "k8": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    },
+    "20": {
+      "R2": {
+        "k1": 0.13897651001359018,
+        "k2": 0.24936131388363658,
+        "k4": 0.3442537086257821,
+        "k8": 0.35462904248766103
+      },
+      "Delta4": 0.2052771986121919,
+      "Delta2": 0.1103848038700464,
+      "Delta8": 0.21565253247407085,
+      "Step2": 0.1103848038700464,
+      "Step4": 0.0948923947421455,
+      "Step8": 0.010375333861878944,
+      "bootstrap_Delta4": {
+        "ci_low": 0.16891147487790714,
+        "ci_high": 0.24396294717204198,
+        "mean": 0.20587161873692902,
+        "median": 0.20584303913882476,
+        "frac_above_zero": 1.0,
+        "n_resamples": 10000,
+        "seed": 314159
+      },
+      "older_raw_dims": {
+        "k1": 0,
+        "k2": 8,
+        "k4": 24,
+        "k8": 56
+      },
+      "pca_evr": {
+        "k1": NaN,
+        "k2": 1.000000000000002,
+        "k4": 0.6535806856607088,
+        "k8": 0.5260722105811503
+      },
+      "history_layers": {
+        "k1": [
+          19
+        ],
+        "k2": [
+          18,
+          19
+        ],
+        "k4": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "k8": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    }
+  },
+  "conditions": {
+    "L12_R2_k1_positive": true,
+    "L12_Delta4_at_least_threshold": true,
+    "L12_bootstrap_ci_low_above_zero": true,
+    "L20_R2_k1_positive": true,
+    "L20_Delta4_at_least_threshold": true,
+    "L20_bootstrap_ci_low_above_zero": true
+  },
+  "verdict": "REPLICATED",
+  "checks": "45 passed, 2 skipped, 2 warnings in 5.28s",
+  "architecture_built": "none",
+  "hyperparameter_search": "none",
+  "additional_model": "none",
+  "additional_dataset": "none",
+  "rescue_modifications": "none",
+  "prior_projects_status": "closed, read-only, results unmodified",
+  "git_head_at_run": "85013f5"
+}

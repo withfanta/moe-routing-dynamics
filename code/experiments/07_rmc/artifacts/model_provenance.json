@@ -1,0 +1,35 @@
+{
+  "experiment": "RMC-P0",
+  "model_id": "jetmoe/jetmoe-8b",
+  "model_revision": "d8fd02ccf7911aa8148a63c7984ffd2e465b0352",
+  "revision_is_immutable_sha": true,
+  "checkpoint_kind": "BASE (not SFT/chat)",
+  "implementation": "transformers.models.jetmoe (official in-tree)",
+  "implementation_version": "4.45.1",
+  "implementation_file": "/home/h-li/miniconda3/envs/sensorllm/lib/python3.10/site-packages/transformers/models/jetmoe/modeling_jetmoe.py",
+  "implementation_file_sha256": "2f02f04ef4ce3da366bd7ee58da4d922968fba949e9aeb82e9a9201898531a20",
+  "implementation_rewritten": false,
+  "third_party_jetmoe_installed": false,
+  "config_facts": {
+    "num_hidden_layers": 24,
+    "num_local_experts": 8,
+    "num_experts_per_tok": 2,
+    "hidden_size": 2048,
+    "intermediate_size": 5632,
+    "model_type": "jetmoe",
+    "architectures": [
+      "JetMoEForCausalLM"
+    ]
+  },
+  "router_studied": "MLP MoE router only (model.layers[i].mlp.router)",
+  "moa_router_used": false,
+  "builtin_output_router_logits_used": false,
+  "builtin_note": "transformers returns attention and MLP router logits interleaved in one flat tuple, so direct module hooks are used instead",
+  "dataset_id": "Salesforce/wikitext",
+  "dataset_config": "wikitext-103-raw-v1",
+  "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "dataset_split": "train",
+  "gradients_on_model": false,
+  "quantized": false,
+  "dtype": "float16"
+}
