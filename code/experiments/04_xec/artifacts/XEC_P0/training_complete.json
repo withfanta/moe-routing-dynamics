@@ -1,0 +1,16 @@
+{
+  "training_complete": true,
+  "timestamp": "2026-09-14 22:39:50",
+  "checkpoints": [
+    "CURRENT_ONLY_seed123.pt",
+    "CURRENT_ONLY_seed2026.pt",
+    "CURRENT_ONLY_seed42.pt",
+    "EXPERT_CACHE_seed123.pt",
+    "EXPERT_CACHE_seed2026.pt",
+    "EXPERT_CACHE_seed42.pt",
+    "FUSED_CACHE_seed123.pt",
+    "FUSED_CACHE_seed2026.pt",
+    "FUSED_CACHE_seed42.pt"
+  ],
+  "note": "TEST oracle access is gated on this marker; model selection used VALIDATION cross entropy only."
+}

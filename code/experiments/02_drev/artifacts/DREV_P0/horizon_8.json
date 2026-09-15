@@ -1,0 +1,22 @@
+{
+  "experiment": "DREV-P0",
+  "worker": "gpu_b",
+  "gpu": "Tesla V100-SXM2-32GB",
+  "distance": 8,
+  "target_layer": 12,
+  "target_layer_code": 11,
+  "source_layer": 4,
+  "source_layer_code": 3,
+  "R2_real": -0.13460598674401392,
+  "R2_shuffle": -0.02565111274879195,
+  "D": -0.10895487399522197,
+  "probe_dim": 128,
+  "n_fit": 512,
+  "n_test": 512,
+  "alpha": 1.0,
+  "mean_G": 0.04731662943959236,
+  "median_G": 0.0116710364818573,
+  "proportion_G_positive": 0.75,
+  "mean_G_fit": 0.04876147210597992,
+  "model_revision": "9b0c1aa87e34a20052389dce1f0cf01da783f654"
+}

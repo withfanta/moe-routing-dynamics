@@ -1,0 +1,54 @@
+{
+  "model_id": "allenai/OLMoE-1B-7B-0125",
+  "model_revision_requested": "9b0c1aa87e34a20052389dce1f0cf01da783f654",
+  "model_revision_resolved": "9b0c1aa87e34a20052389dce1f0cf01da783f654",
+  "model_last_modified": "2025-03-16 15:13:11+00:00",
+  "instruct_checkpoint": false,
+  "dataset_id": "Salesforce/wikitext",
+  "dataset_config": "wikitext-103-raw-v1",
+  "dataset_revision_requested": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "dataset_revision_resolved": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "config_verification": {
+    "architectures": {
+      "expected": [
+        "OlmoeForCausalLM"
+      ],
+      "actual": [
+        "OlmoeForCausalLM"
+      ],
+      "ok": true
+    },
+    "hidden_size": {
+      "expected": 2048,
+      "actual": 2048,
+      "ok": true
+    },
+    "num_hidden_layers": {
+      "expected": 16,
+      "actual": 16,
+      "ok": true
+    },
+    "num_experts": {
+      "expected": 64,
+      "actual": 64,
+      "ok": true
+    },
+    "num_experts_per_tok": {
+      "expected": 8,
+      "actual": 8,
+      "ok": true
+    },
+    "norm_topk_prob": {
+      "expected": false,
+      "actual": false,
+      "ok": true
+    }
+  },
+  "config_mismatches": [],
+  "intermediate_size": 1024,
+  "vocab_size": 50304,
+  "eos_token_id": 50279,
+  "tokenizer_class": "GPTNeoXTokenizerFast",
+  "tokenizer_vocab_size": 50280,
+  "runtime_dtype": "float16"
+}

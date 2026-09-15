@@ -1,0 +1,73 @@
+{
+  "transitions": [
+    {
+      "transition_human": "4 -> 5",
+      "transition_code": [
+        3,
+        4
+      ],
+      "n_validation": 512,
+      "n_test": 512,
+      "r2_baseline": -1.63915477163198,
+      "r2_augmented": -0.8127097342689122,
+      "delta_r2": 0.8264450373630678,
+      "baseline_dim": 2112,
+      "augmented_dim": 4160,
+      "mean_G": 0.05327188968658447,
+      "median_G": 0.011303901672363281,
+      "proportion_G_positive": 0.787109375,
+      "mean_G_validation": 0.057832084596157074
+    },
+    {
+      "transition_human": "8 -> 9",
+      "transition_code": [
+        7,
+        8
+      ],
+      "n_validation": 512,
+      "n_test": 512,
+      "r2_baseline": -0.7243385536087241,
+      "r2_augmented": -0.2777945047080448,
+      "delta_r2": 0.44654404890067934,
+      "baseline_dim": 2112,
+      "augmented_dim": 4160,
+      "mean_G": 0.05694029480218887,
+      "median_G": 0.0172044038772583,
+      "proportion_G_positive": 0.791015625,
+      "mean_G_validation": 0.05476760119199753
+    },
+    {
+      "transition_human": "12 -> 13",
+      "transition_code": [
+        11,
+        12
+      ],
+      "n_validation": 512,
+      "n_test": 512,
+      "r2_baseline": -0.16347027892231747,
+      "r2_augmented": -0.014281091283812497,
+      "delta_r2": 0.14918918763850497,
+      "baseline_dim": 2112,
+      "augmented_dim": 4160,
+      "mean_G": 0.04643775150179863,
+      "median_G": 0.010046064853668213,
+      "proportion_G_positive": 0.75390625,
+      "mean_G_validation": 0.04171949252486229
+    }
+  ],
+  "mean_delta_r2": 0.47405942463408407,
+  "verdict": "SUPPORTED",
+  "decision_sentence": "REDV-V1 supports delayed predictive value of rejected near-miss expert evidence under the frozen OLMoE/WikiText setting.",
+  "stopping_note": "The prerequisite phenomenon is supported. REDV-V1 stops here. No method is implemented. A later experiment requires explicit user authorization.",
+  "judgement_rule": {
+    "supported": "mean Delta_R2 >= +0.02 AND all three Delta_R2 > 0",
+    "not_supported": "mean Delta_R2 < +0.01 OR at least two Delta_R2 <= 0",
+    "inconclusive": "otherwise",
+    "frozen_before_results": true
+  },
+  "model_id": "allenai/OLMoE-1B-7B-0125",
+  "model_revision": "9b0c1aa87e34a20052389dce1f0cf01da783f654",
+  "data_manifest_sha256": "e8581e6b3a301a9ddce5ae46b5b436c9ed5ba769bc9771047ea9d2b680cf1714",
+  "probe": "sklearn.linear_model.Ridge(alpha=1.0)",
+  "rescue_modifications": "none"
+}

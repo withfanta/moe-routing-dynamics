@@ -1,0 +1,141 @@
+{
+  "targets": {
+    "8": {
+      "target_layer": 8,
+      "target_layer_code": 7,
+      "history_layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "n_fit": 1024,
+      "n_test": 1024,
+      "input_dim": 64,
+      "target_dim": 64,
+      "raw_dims": {
+        "FUSED": 224,
+        "EXPERT_IDENTITY": 14336,
+        "SHUFFLED_IDENTITY": 14336
+      },
+      "R2_fused": 0.1901612969627961,
+      "R2_identity": 0.2993929679207207,
+      "R2_shuffled": -0.001490233765858568,
+      "A": 0.10923167095792458,
+      "B": 0.3008832016865792
+    },
+    "12": {
+      "target_layer": 12,
+      "target_layer_code": 11,
+      "history_layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "n_fit": 1024,
+      "n_test": 1024,
+      "input_dim": 64,
+      "target_dim": 64,
+      "raw_dims": {
+        "FUSED": 352,
+        "EXPERT_IDENTITY": 22528,
+        "SHUFFLED_IDENTITY": 22528
+      },
+      "R2_fused": 0.2870457571839016,
+      "R2_identity": 0.4621050257696424,
+      "R2_shuffled": 0.003955343149551366,
+      "A": 0.17505926858574083,
+      "B": 0.45814968262009104
+    }
+  },
+  "mean_A": 0.1421454697718327,
+  "mean_B": 0.37951644215333513,
+  "final_verdict": "PROMISING",
+  "decision_sentence": "Individual selected-expert provenance contains incremental held-out information about future routing states beyond early fusion and an expert-identity-destroyed control, under this frozen OLMoE/WikiText setting.",
+  "stopping_note": "This does NOT prove an expert cache architecture improves performance. EIPC-P0 stops here; cache attention is not implemented. A later method experiment requires explicit user authorization.",
+  "conditions": [
+    {
+      "condition": 1,
+      "requirement": "R2_identity > 0 at both targets",
+      "observed": "L8 +0.29939, L12 +0.46211",
+      "passed": true
+    },
+    {
+      "condition": 2,
+      "requirement": "A > 0 at both targets",
+      "observed": "L8 +0.10923, L12 +0.17506",
+      "passed": true
+    },
+    {
+      "condition": 3,
+      "requirement": "B > 0 at both targets",
+      "observed": "L8 +0.30088, L12 +0.45815",
+      "passed": true
+    },
+    {
+      "condition": 4,
+      "requirement": "mean(A) >= +0.02",
+      "observed": "mean(A) = +0.14215",
+      "passed": true
+    },
+    {
+      "condition": 5,
+      "requirement": "mean(B) >= +0.02",
+      "observed": "mean(B) = +0.37952",
+      "passed": true
+    }
+  ],
+  "judgement_rule": {
+    "condition_1": "R2_identity > 0 at both targets",
+    "condition_2": "A > 0 at both targets",
+    "condition_3": "B > 0 at both targets",
+    "condition_4": "mean(A) >= +0.02",
+    "condition_5": "mean(B) >= +0.02",
+    "any_failure": "NOT_PROMISING",
+    "frozen_before_results": true
+  },
+  "experiment": "EIPC-P0",
+  "model_id": "allenai/OLMoE-1B-7B-0125",
+  "model_revision": "9b0c1aa87e34a20052389dce1f0cf01da783f654",
+  "dataset_split_used": "train",
+  "data_manifest_sha256": "23d75e6ee9f2a76249001e3e9411254ad07efcc20b667c6b317e8d523761fc4c",
+  "fit_fingerprint": "7a7910a0f6653d4912ed9d458e9b78fcd94ecc31ae104820ee875e7cb6f0b636",
+  "test_fingerprint": "ac0dce7ccfcba1cba05527e2d0ab020cf7e5ce967ef35fbf456caaac0085f978",
+  "projection": {
+    "seed": 20260917,
+    "out_dim": 32,
+    "sha256": "fb9e6e9b7568f6d4a5ce74a7bee1ba2eab5a48a02fb2a93f80520e4ec0480282"
+  },
+  "compression": "StandardScaler -> PCA(n_components=64, svd_solver='randomized') -> StandardScaler, fit on FIT only",
+  "probe": "sklearn.linear_model.Ridge(alpha=1.0), multi-output",
+  "shuffle_seed": 314159,
+  "diagnostics": {
+    "8": {
+      "pca_evr": {
+        "FUSED": 0.7217692732810974,
+        "EXPERT_IDENTITY": 0.20980432629585266,
+        "SHUFFLED_IDENTITY": 0.19245097041130066
+      }
+    },
+    "12": {
+      "pca_evr": {
+        "FUSED": 0.6190387606620789,
+        "EXPERT_IDENTITY": 0.18797609210014343,
+        "SHUFFLED_IDENTITY": 0.16724669933319092
+      }
+    }
+  },
+  "rescue_modifications": "none",
+  "prior_projects_status": "closed, read-only, results unmodified"
+}

@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+
+# Large cached feature tensors are regenerable from the frozen manifest.
+artifacts/*/*.npz
+artifacts/*/run.log

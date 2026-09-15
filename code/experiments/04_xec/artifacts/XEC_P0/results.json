@@ -1,0 +1,249 @@
+{
+  "comparisons": {
+    "d_native": {
+      "mean": -0.0015059461038671289,
+      "ci_low": -0.005742784197929209,
+      "ci_high": 0.002759556555079751,
+      "n": 1024,
+      "n_bootstrap": 10000,
+      "bootstrap_seed": 314159
+    },
+    "d_current": {
+      "mean": 0.0003469338211411067,
+      "ci_low": -0.0007609213200090964,
+      "ci_high": 0.0016699435176582077,
+      "n": 1024,
+      "n_bootstrap": 10000,
+      "bootstrap_seed": 314159
+    },
+    "d_fused": {
+      "mean": 0.0010556177570982326,
+      "ci_low": -2.333935053953554e-05,
+      "ci_high": 0.002156195306276894,
+      "n": 1024,
+      "n_bootstrap": 10000,
+      "bootstrap_seed": 314159
+    }
+  },
+  "seed_check": {
+    "all_seeds_expert_lower": false,
+    "per_seed": {
+      "42": {
+        "expert": 2.688811458451096,
+        "fused": 2.6891503427724093,
+        "expert_lower": true
+      },
+      "123": {
+        "expert": 2.692696572298764,
+        "fused": 2.6909004959883656,
+        "expert_lower": false
+      },
+      "2026": {
+        "expert": 2.6908638989373,
+        "fused": 2.6891542376550905,
+        "expert_lower": false
+      }
+    }
+  },
+  "per_seed_mean_nll": {
+    "CURRENT_ONLY": {
+      "42": 2.6887957709504873,
+      "123": 2.692549081141196,
+      "2026": 2.6899862761320534,
+      "mean": 2.690443709407912
+    },
+    "FUSED_CACHE": {
+      "42": 2.6891503427724093,
+      "123": 2.6909004959883656,
+      "2026": 2.6891542376550905,
+      "mean": 2.6897350254719554
+    },
+    "EXPERT_CACHE": {
+      "42": 2.688811458451096,
+      "123": 2.692696572298764,
+      "2026": 2.6908638989373,
+      "mean": 2.6907906432290534
+    }
+  },
+  "descriptive": {
+    "native_mean_nll": 2.6922965893329205,
+    "five_action_oracle_mean_nll": 2.6473121643066406,
+    "oracle_headroom_vs_native": -0.04498442502627986,
+    "test_oracle_action_distribution": {
+      "counts": [
+        271,
+        225,
+        188,
+        170,
+        170
+      ],
+      "fractions": [
+        0.2646484375,
+        0.2197265625,
+        0.18359375,
+        0.166015625,
+        0.166015625
+      ],
+      "fraction_native_action": 0.2646484375,
+      "fraction_swap_actions": 0.7353515625
+    },
+    "action_accuracy_vs_test_oracle": {
+      "CURRENT_ONLY": 0.2099609375,
+      "FUSED_CACHE": 0.2119140625,
+      "EXPERT_CACHE": 0.21061197916666666
+    },
+    "predicted_action_distribution": {
+      "CURRENT_ONLY": {
+        "counts": [
+          865,
+          489,
+          640,
+          554,
+          524
+        ],
+        "fractions": [
+          0.2815755208333333,
+          0.1591796875,
+          0.20833333333333334,
+          0.18033854166666666,
+          0.17057291666666666
+        ],
+        "fraction_native_action": 0.2815755208333333,
+        "fraction_swap_actions": 0.7184244791666666
+      },
+      "FUSED_CACHE": {
+        "counts": [
+          803,
+          553,
+          625,
+          574,
+          517
+        ],
+        "fractions": [
+          0.2613932291666667,
+          0.18001302083333334,
+          0.20345052083333334,
+          0.18684895833333334,
+          0.16829427083333334
+        ],
+        "fraction_native_action": 0.2613932291666667,
+        "fraction_swap_actions": 0.7386067708333334
+      },
+      "EXPERT_CACHE": {
+        "counts": [
+          843,
+          513,
+          633,
+          557,
+          526
+        ],
+        "fractions": [
+          0.2744140625,
+          0.1669921875,
+          0.2060546875,
+          0.18131510416666666,
+          0.17122395833333334
+        ],
+        "fraction_native_action": 0.2744140625,
+        "fraction_swap_actions": 0.7255859375
+      }
+    },
+    "expert_cache_fraction_improved_vs_native": 0.4736328125,
+    "expert_cache_fraction_worsened_vs_native": 0.5263671875,
+    "expert_cache_fraction_equal_vs_native": 0.0
+  },
+  "final_verdict": "NOT_PROMISING",
+  "decision_sentence": "XEC-P0 does not show that historical selected-expert states can be converted into a Layer-12 routing decision that improves true next-token likelihood beyond native routing, a current-only learned policy, and a fused-history cache, under this frozen setting. The expert-cache method direction is stopped.",
+  "stopping_note": "The expert-cache method direction is stopped. No more actions, no target-layer change, no cache-dimension tuning, no larger sample count, no attention heads, no optimizer change, no Layer 8, no other model or dataset, no rescue.",
+  "conditions": [
+    {
+      "condition": 1,
+      "requirement": "mean d_native <= -0.005",
+      "observed": "mean = -0.001506",
+      "passed": false
+    },
+    {
+      "condition": 2,
+      "requirement": "95% CI upper bound for d_native < 0",
+      "observed": "CI [-0.005743, +0.002760]",
+      "passed": false
+    },
+    {
+      "condition": 3,
+      "requirement": "mean d_current <= -0.005",
+      "observed": "mean = +0.000347",
+      "passed": false
+    },
+    {
+      "condition": 4,
+      "requirement": "95% CI upper bound for d_current < 0",
+      "observed": "CI [-0.000761, +0.001670]",
+      "passed": false
+    },
+    {
+      "condition": 5,
+      "requirement": "mean d_fused <= -0.005",
+      "observed": "mean = +0.001056",
+      "passed": false
+    },
+    {
+      "condition": 6,
+      "requirement": "95% CI upper bound for d_fused < 0",
+      "observed": "CI [-0.000023, +0.002156]",
+      "passed": false
+    },
+    {
+      "condition": 7,
+      "requirement": "EXPERT_CACHE beats FUSED_CACHE in mean TEST NLL in all three seeds",
+      "observed": "seed 42: 2.68881 vs 2.68915, seed 123: 2.69270 vs 2.69090, seed 2026: 2.69086 vs 2.68915",
+      "passed": false
+    }
+  ],
+  "judgement_rule": {
+    "paired_means": "each of d_native, d_current, d_fused <= -0.005",
+    "ci": "each 95% paired-bootstrap CI upper bound < 0",
+    "seed_consistency": "EXPERT_CACHE < FUSED_CACHE mean NLL in all three seeds",
+    "any_failure": "NOT_PROMISING",
+    "frozen_before_results": true
+  },
+  "experiment": "XEC-P0",
+  "model_id": "allenai/OLMoE-1B-7B-0125",
+  "model_revision": "9b0c1aa87e34a20052389dce1f0cf01da783f654",
+  "target_layer": 12,
+  "target_layer_code": 11,
+  "n_test": 1024,
+  "n_train": 2048,
+  "n_validation": 512,
+  "data_manifest_sha256": "8d77d76970b9635c10cabb8de564186ef7e932d25b10ddc6e81af7b12f92bc55",
+  "fingerprints": {
+    "train": "151e51fcc47bd11c53ca19b36e9324065701c52261b6f31b7dc1050851d94f11",
+    "validation": "fc544a68ff5fb92189e0841038fe92d243e4b2dc462da6848c3eaaf59f7dee83",
+    "test": "ed456eedcb42f295b10b9b8438902ce658970781da26e1938ff431b35299b6e7"
+  },
+  "eipc_exclusion": {
+    "eipc_split_used": "train",
+    "eipc_fit_n": 1024,
+    "eipc_test_n": 1024,
+    "eipc_blocks_excluded": 2048,
+    "eipc_max_records": 40000,
+    "eipc_blocks_available": 20628
+  },
+  "projection_sha256": "11a1228c725b2a952b6cb966ac0316bd102b8a48bacdbf76391f0d44476556a6",
+  "policy_seeds": [
+    42,
+    123,
+    2026
+  ],
+  "olmoe_receives_gradients": false,
+  "artifact_sha256": {
+    "test_policy_results.npz": "3099c08c144f9fc6359a06424109540831c765a08a04dfe5d356124209a066b6",
+    "test_oracle_descriptive.npz": "cfc24c3ed24f82e6732c52331221432a90ea96df29148213f186feb68626d08b",
+    "train_features.npz": "df79814e9d91a2066bded4c61fa9866c46f8262a9020fdb9b5418727fc5d19bb",
+    "validation_features.npz": "45a09ec67e936a4e18fe314a590c038df19dd5e473248c4f64a4d7eea7faa35a",
+    "test_features.npz": "4bc771f893ae48bb8712599100570e5920c41249faacf2db1434a205f997632c",
+    "train_oracle.npz": "111c95efdc159873860734f55d4a0634d6483ff35170afddab9454d228bc54df",
+    "validation_oracle.npz": "91ea518fa662f00344e74bae61535a395f5fa3a94064bf545da6136824a1b507"
+  },
+  "rescue_modifications": "none",
+  "prior_projects_status": "closed, read-only, results unmodified"
+}

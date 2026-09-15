@@ -1,0 +1,15 @@
+{
+  "seed": 20260918,
+  "shape": [
+    2048,
+    64
+  ],
+  "in_dim": 2048,
+  "out_dim": 64,
+  "distribution": "Normal(0, 1/sqrt(64))",
+  "dtype": "float64",
+  "sha256": "11a1228c725b2a952b6cb966ac0316bd102b8a48bacdbf76391f0d44476556a6",
+  "trainable": false,
+  "learned": false,
+  "shared_across_layers_experts_splits": true
+}

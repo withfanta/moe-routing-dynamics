@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+
+# Large regenerable caches. Hashes and the regeneration command are documented in
+# artifacts/XEC_P0/RESULTS.md.
+artifacts/*/*.npz
+artifacts/*/*.pt
+artifacts/*/run.log

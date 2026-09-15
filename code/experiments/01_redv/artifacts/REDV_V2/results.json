@@ -1,0 +1,89 @@
+{
+  "experiment": "REDV-V2",
+  "transitions": [
+    {
+      "transition_human": "4 -> 5",
+      "transition_code": [
+        3,
+        4
+      ],
+      "n_fit": 1024,
+      "n_test": 1024,
+      "R2_baseline": -3.384191064563997,
+      "R2_real": -0.9418455045284644,
+      "R2_shuffle": -0.7455011715706708,
+      "D": -0.19634433295779363,
+      "gain_over_baseline": 2.442345560035533,
+      "baseline_dim": 2112,
+      "augmented_dim": 4160,
+      "mean_G": 0.053721144795417786,
+      "median_G": 0.011477828025817871,
+      "proportion_G_positive": 0.783203125
+    },
+    {
+      "transition_human": "8 -> 9",
+      "transition_code": [
+        7,
+        8
+      ],
+      "n_fit": 1024,
+      "n_test": 1024,
+      "R2_baseline": -1.514434505784434,
+      "R2_real": -0.4980345315899901,
+      "R2_shuffle": -0.3657950480830223,
+      "D": -0.1322394835069678,
+      "gain_over_baseline": 1.0163999741944438,
+      "baseline_dim": 2112,
+      "augmented_dim": 4160,
+      "mean_G": 0.052629392594099045,
+      "median_G": 0.01291567087173462,
+      "proportion_G_positive": 0.75
+    },
+    {
+      "transition_human": "12 -> 13",
+      "transition_code": [
+        11,
+        12
+      ],
+      "n_fit": 1024,
+      "n_test": 1024,
+      "R2_baseline": -1.0625966444876642,
+      "R2_real": -0.2718449490574224,
+      "R2_shuffle": -0.3012369753578046,
+      "D": 0.02939202630038218,
+      "gain_over_baseline": 0.7907516954302418,
+      "baseline_dim": 2112,
+      "augmented_dim": 4160,
+      "mean_G": 0.045752767473459244,
+      "median_G": 0.010348618030548096,
+      "proportion_G_positive": 0.7373046875
+    }
+  ],
+  "mean_D": -0.09973059672145974,
+  "final_verdict": "NOT_SUPPORTED",
+  "decision_sentence": "REDV-V2 does not support sample-specific delayed predictive value of rejected near-miss expert evidence under the frozen OLMoE/WikiText setting with a dimension-matched shuffled control. The rejected-expert delayed-value direction is stopped.",
+  "stopping_note": "The entire rejected-expert delayed-value direction is stopped. No REDV-V3. No sample-size increase, no new dataset or model, no alpha change, no PCA, no MLP, no rank change, no added layers, no additional shuffle seeds, no subgroup reinterpretation. The negative result is preserved.",
+  "failed_conditions": [
+    "condition 1 failed: R2_real <= 0 at transition index [0, 1, 2]",
+    "condition 2 failed: D <= 0 at transition index [0, 1]",
+    "condition 3 failed: mean(D) = -0.09973 < +0.02"
+  ],
+  "judgement_rule": {
+    "condition_1": "R2_real > 0 for all three transitions",
+    "condition_2": "D > 0 for all three transitions",
+    "condition_3": "mean(D) >= +0.02",
+    "any_failure": "NOT_SUPPORTED",
+    "frozen_before_results": true
+  },
+  "model_id": "allenai/OLMoE-1B-7B-0125",
+  "model_revision": "9b0c1aa87e34a20052389dce1f0cf01da783f654",
+  "data_manifest_sha256": "52cd97f5daea74abcd588cb580e6324c3c0f552ac759e6bf98be96b5bbe53c38",
+  "fit_fingerprint": "bf4bcf5fd59a583517bdf72df713680b4a07e08b1f34e230cf6f775587f0b1af",
+  "test_fingerprint": "6c3159fbfdb817d5d5f51cee2065648b2b29e6ee7b90d2e36a2ab33b82429d94",
+  "probe": "sklearn.linear_model.Ridge(alpha=1.0)",
+  "shuffle_seed": 314159,
+  "v2_seed": 20260915,
+  "gpu": "Tesla V100-SXM2-32GB",
+  "rescue_modifications": "none",
+  "redv_v1_verdict_unchanged": "SUPPORTED"
+}

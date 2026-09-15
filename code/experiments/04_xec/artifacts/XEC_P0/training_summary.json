@@ -1,0 +1,83 @@
+{
+  "CURRENT_ONLY_seed42": {
+    "variant": "CURRENT_ONLY",
+    "seed": 42,
+    "best_epoch": 0,
+    "best_val_ce": 1.6211838722229004,
+    "final_train_ce": 0.048058699088869616,
+    "validation_action_accuracy": 0.20703125,
+    "trainable_params": 153600
+  },
+  "FUSED_CACHE_seed42": {
+    "variant": "FUSED_CACHE",
+    "seed": 42,
+    "best_epoch": 0,
+    "best_val_ce": 1.624821662902832,
+    "final_train_ce": 0.031560288116452284,
+    "validation_action_accuracy": 0.193359375,
+    "trainable_params": 153600
+  },
+  "EXPERT_CACHE_seed42": {
+    "variant": "EXPERT_CACHE",
+    "seed": 42,
+    "best_epoch": 0,
+    "best_val_ce": 1.6216099858283997,
+    "final_train_ce": 0.029671516793314368,
+    "validation_action_accuracy": 0.208984375,
+    "trainable_params": 153600
+  },
+  "CURRENT_ONLY_seed123": {
+    "variant": "CURRENT_ONLY",
+    "seed": 123,
+    "best_epoch": 0,
+    "best_val_ce": 1.633781373500824,
+    "final_train_ce": 0.06428550696000457,
+    "validation_action_accuracy": 0.201171875,
+    "trainable_params": 153600
+  },
+  "FUSED_CACHE_seed123": {
+    "variant": "FUSED_CACHE",
+    "seed": 123,
+    "best_epoch": 0,
+    "best_val_ce": 1.6338220238685608,
+    "final_train_ce": 0.04734196516801603,
+    "validation_action_accuracy": 0.19921875,
+    "trainable_params": 153600
+  },
+  "EXPERT_CACHE_seed123": {
+    "variant": "EXPERT_CACHE",
+    "seed": 123,
+    "best_epoch": 0,
+    "best_val_ce": 1.633497178554535,
+    "final_train_ce": 0.04468579211970791,
+    "validation_action_accuracy": 0.203125,
+    "trainable_params": 153600
+  },
+  "CURRENT_ONLY_seed2026": {
+    "variant": "CURRENT_ONLY",
+    "seed": 2026,
+    "best_epoch": 0,
+    "best_val_ce": 1.6169469952583313,
+    "final_train_ce": 0.08255682757589966,
+    "validation_action_accuracy": 0.23046875,
+    "trainable_params": 153600
+  },
+  "FUSED_CACHE_seed2026": {
+    "variant": "FUSED_CACHE",
+    "seed": 2026,
+    "best_epoch": 0,
+    "best_val_ce": 1.6156827807426453,
+    "final_train_ce": 0.04685252877243329,
+    "validation_action_accuracy": 0.23046875,
+    "trainable_params": 153600
+  },
+  "EXPERT_CACHE_seed2026": {
+    "variant": "EXPERT_CACHE",
+    "seed": 2026,
+    "best_epoch": 0,
+    "best_val_ce": 1.6156803965568542,
+    "final_train_ce": 0.04016208725806791,
+    "validation_action_accuracy": 0.228515625,
+    "trainable_params": 153600
+  }
+}

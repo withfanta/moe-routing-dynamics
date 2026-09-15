@@ -1,0 +1,16 @@
+{
+  "seed": 20260917,
+  "shape": [
+    2048,
+    32
+  ],
+  "in_dim": 2048,
+  "out_dim": 32,
+  "distribution": "Normal(0, 1/sqrt(32))",
+  "dtype": "float64",
+  "sha256": "fb9e6e9b7568f6d4a5ce74a7bee1ba2eab5a48a02fb2a93f80520e4ec0480282",
+  "trainable": false,
+  "shared_across_layers": true,
+  "shared_across_experts": true,
+  "shared_across_fit_and_test": true
+}
