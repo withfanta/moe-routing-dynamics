@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+
+# Regenerable extraction caches; hashes recorded in artifacts/EPD_P0/RESULTS.md.
+artifacts/*/*.npz
+artifacts/*/run.log

@@ -1,0 +1,140 @@
+{
+  "experiment": "RMO-P0",
+  "title": "Routing Markov-Order Pilot",
+  "exploratory": true,
+  "no_formal_verdict": true,
+  "post_hoc_on_already_observed_data": true,
+  "independent_confirmation": false,
+  "new_model_inference_run": false,
+  "gpu_used": false,
+  "source": {
+    "project": "/home/h-li/work/expert_provenance_decomposition",
+    "artifact_dir": "/home/h-li/work/expert_provenance_decomposition/artifacts/EPD_P0",
+    "epd_commit": "995d23e",
+    "manifest_sha256_expected": "bbbe06fcb451b217de3b03cf75d37921a4e19f555d95d92302b8898d8a3466ba",
+    "file_sha256": {
+      "data_manifest.json": "bbbe06fcb451b217de3b03cf75d37921a4e19f555d95d92302b8898d8a3466ba",
+      "merged_raw.npz": "39c9b609d89d7fe568e88221b35bdcba6f686e4cec7af1ba1cdd76527d030442",
+      "shard_0.npz": "690e9ffe2e624830df18356fbd2150ed6a47ba5c4f7f259b9ce7f67b6a55675c",
+      "shard_1.npz": "42d05fe99010e4c6903de4b209f122ae5f58bf5d178ee0ca36d6606cd32ce31b",
+      "shard_2.npz": "f9820d78864c029167f32199ae0be4023242876b8f187b080962a6254748cd30",
+      "shard_3.npz": "590d974a2cd8a2644b59ea0f02e977493bd84c8f39b195e782285ec0bf800c0c"
+    },
+    "status": "closed, read-only, unmodified"
+  },
+  "underlying_capture": {
+    "model_id": "allenai/OLMoE-1B-7B-0125",
+    "model_revision": "9b0c1aa87e34a20052389dce1f0cf01da783f654",
+    "note": "captured by EPD-P0; no inference was run by RMO-P0"
+  },
+  "n_fit": 512,
+  "n_test": 256,
+  "resampled": false,
+  "target": "native Layer 12 router logits, per-sample centred, FIT-standardized",
+  "input": "64-d binary native Top-8 selection indicator per layer, identities only",
+  "recent_layer": 11,
+  "recent_fitted_once": true,
+  "compression": "StandardScaler -> PCA(16, randomized, random_state=20260920) -> StandardScaler, fit on FIT only",
+  "probe": "sklearn.linear_model.Ridge(alpha=1.0), multi-output",
+  "probe_input_dim": 32,
+  "windows": {
+    "2": [
+      10
+    ],
+    "4": [
+      8,
+      9,
+      10
+    ],
+    "8": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "11": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "older_raw_dims": {
+    "2": 64,
+    "4": 192,
+    "8": 448,
+    "11": 640
+  },
+  "pca_explained_variance_ratio": {
+    "z_recent": 0.6981499066605004,
+    "z_old_2": 0.6818692417832621,
+    "z_old_4": 0.5583024964679033,
+    "z_old_8": 0.4765223655438148,
+    "z_old_11": 0.4054628876975036
+  },
+  "r2_test": {
+    "R2_1": 0.5987857371764951,
+    "R2_2": 0.623200212340848,
+    "R2_4": 0.647045882367207,
+    "R2_8": 0.6626511098179462,
+    "R2_11": 0.6654387153209018
+  },
+  "history_label": {
+    "1": "L11 only",
+    "2": "L10-11",
+    "4": "L8-11",
+    "8": "L4-11",
+    "11": "L1-11"
+  },
+  "cumulative_gains": {
+    "G_2": 0.02441447516435291,
+    "G_4": 0.04826014519071187,
+    "G_8": 0.06386537264145109,
+    "G_11": 0.06665297814440674
+  },
+  "stepwise_gains": {
+    "S_2": 0.02441447516435291,
+    "S_4": 0.023845670026358956,
+    "S_8": 0.015605227450739223,
+    "S_11": 0.002787605502955648
+  },
+  "pattern": "SHORT-HISTORY",
+  "pattern_detail": {
+    "label": "SHORT-HISTORY",
+    "noticeable": 0.02,
+    "max_cumulative_gain": 0.06665297814440674,
+    "best_recent_r2": 0.647045882367207,
+    "late_over_best_recent": 0.01839283295369487,
+    "max_drop_along_curve": 0.0,
+    "curve_irregular": false,
+    "cumulative": {
+      "G_2": 0.02441447516435291,
+      "G_4": 0.04826014519071187,
+      "G_8": 0.06386537264145109,
+      "G_11": 0.06665297814440674
+    },
+    "stepwise": {
+      "S_2": 0.02441447516435291,
+      "S_4": 0.023845670026358956,
+      "S_8": 0.015605227450739223,
+      "S_11": 0.002787605502955648
+    }
+  },
+  "interpretation": "Layer 10 and/or Layers 8-10 improve prediction beyond Layer 11 alone, but older history adds little after that, under this frozen probe.",
+  "scientific_limit": "Tests predictive dependence beyond Layer 11 under a fixed linear low-dimensional probe. Does not prove causal memory, a formal Markov order, that a recurrent router will help, that storing old paths improves NLL, or that routing should use long-term memory.",
+  "checks": "27 passed in 1.13s",
+  "architecture_built": "none",
+  "hyperparameter_search": "none",
+  "rescue_modifications": "none",
+  "prior_projects_status": "closed, read-only, results unmodified",
+  "git_head_at_run": "07f0854"
+}

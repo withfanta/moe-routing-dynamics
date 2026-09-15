@@ -1,0 +1,244 @@
+{
+  "experiment": "EPD-P0",
+  "exploratory": true,
+  "no_formal_verdict": true,
+  "model_id": "allenai/OLMoE-1B-7B-0125",
+  "model_revision": "9b0c1aa87e34a20052389dce1f0cf01da783f654",
+  "target_layer": 12,
+  "history_layers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "n_fit": 512,
+  "n_test": 256,
+  "data_manifest_sha256": "bbbe06fcb451b217de3b03cf75d37921a4e19f555d95d92302b8898d8a3466ba",
+  "fingerprints": {
+    "fit": "e88b138a2c496524dfd53a9c35030e579ccd0e14915734c84e8af163b736c710",
+    "test": "190ee4bb4e562d24c1396319cb42c7e490a3b43b1b7fd8c8cfb83eafab4ff74f"
+  },
+  "prior_exclusion": {
+    "eipc_blocks": 2048,
+    "xec_blocks": 3584,
+    "eipc_xec_overlap": 0,
+    "union_excluded": 5632,
+    "eipc_blocks_available": 20628,
+    "xec_blocks_total": 20628,
+    "shared_max_records": 40000
+  },
+  "reused_eipc_projection": {
+    "seed": 20260917,
+    "shape": [
+      2048,
+      32
+    ],
+    "in_dim": 2048,
+    "out_dim": 32,
+    "distribution": "Normal(0, 1/sqrt(32))",
+    "dtype": "float64",
+    "sha256": "fb9e6e9b7568f6d4a5ce74a7bee1ba2eab5a48a02fb2a93f80520e4ec0480282",
+    "trainable": false,
+    "shared_across_layers": true,
+    "shared_across_experts": true,
+    "shared_across_fit_and_test": true
+  },
+  "probe": "sklearn.linear_model.Ridge(alpha=1.0), multi-output",
+  "compression": "StandardScaler -> PCA(32, randomized) -> StandardScaler, fit on FIT only",
+  "raw_dims": {
+    "FUSED": 352,
+    "ID_PATH": 704,
+    "CONTENT_RANK": 2816,
+    "FULL_PROVENANCE": 22528
+  },
+  "pca_explained_variance_ratio": {
+    "FUSED": 0.5375421047210693,
+    "ID_PATH": 0.5217444896697998,
+    "CONTENT_RANK": 0.19687724113464355,
+    "FULL_PROVENANCE": 0.1517987847328186
+  },
+  "main": {
+    "R2_fused": 0.20114033648445187,
+    "R2_id": 0.6696914181719282,
+    "R2_content": 0.06732391703802035,
+    "R2_full": 0.34007424419871485,
+    "G_full_vs_fused": 0.13893390771426298,
+    "G_identity_given_content": 0.2727503271606945,
+    "G_content_given_identity": -0.3296171739732134
+  },
+  "layerwise": {
+    "R2_id_layer": {
+      "1": 0.14252628100318845,
+      "2": 0.25596825440846405,
+      "3": 0.3585862626660606,
+      "4": 0.4166411015723109,
+      "5": 0.4038355898972273,
+      "6": 0.4499093611641826,
+      "7": 0.44796963996957184,
+      "8": 0.4938081399503077,
+      "9": 0.5384979520883657,
+      "10": 0.5721576332665436,
+      "11": 0.5992682485185276
+    },
+    "R2_content_layer": {
+      "1": 0.009136798438423958,
+      "2": -0.007208046518207561,
+      "3": -0.0060501316429795934,
+      "4": 0.005562477947939671,
+      "5": -0.010475504123697292,
+      "6": -0.008143085301196885,
+      "7": -0.0065662585555949,
+      "8": 0.02139151470519699,
+      "9": 0.004201060263629012,
+      "10": 0.007000612432945882,
+      "11": 0.010174928597149774
+    },
+    "summary": {
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "best_id_layer": 11,
+      "best_content_layer": 8,
+      "mean_id": 0.4253789513186137,
+      "mean_content": 0.0017294878403280962,
+      "id_minus_content_mean": 0.4236494634782856,
+      "note": "Exploratory only; not used to create post-hoc subgroups."
+    },
+    "n_components": 16
+  },
+  "transitions": {
+    "target_marginal_mean": 0.125,
+    "top_pairs": [
+      {
+        "source_layer_human": 7,
+        "source_expert": 42,
+        "target_expert": 5,
+        "conditional_prob": 0.125,
+        "target_marginal": 0.055989583333333336,
+        "enrichment": 0.06901041666666666,
+        "source_support_selections": 1
+      },
+      {
+        "source_layer_human": 11,
+        "source_expert": 56,
+        "target_expert": 47,
+        "conditional_prob": 0.125,
+        "target_marginal": 0.061197916666666664,
+        "enrichment": 0.06380208333333334,
+        "source_support_selections": 7
+      },
+      {
+        "source_layer_human": 10,
+        "source_expert": 46,
+        "target_expert": 16,
+        "conditional_prob": 0.125,
+        "target_marginal": 0.07161458333333333,
+        "enrichment": 0.05338541666666667,
+        "source_support_selections": 1
+      },
+      {
+        "source_layer_human": 8,
+        "source_expert": 2,
+        "target_expert": 38,
+        "conditional_prob": 0.09375,
+        "target_marginal": 0.048177083333333336,
+        "enrichment": 0.045572916666666664,
+        "source_support_selections": 12
+      },
+      {
+        "source_layer_human": 11,
+        "source_expert": 56,
+        "target_expert": 27,
+        "conditional_prob": 0.05357142857142857,
+        "target_marginal": 0.018229166666666668,
+        "enrichment": 0.035342261904761904,
+        "source_support_selections": 7
+      },
+      {
+        "source_layer_human": 6,
+        "source_expert": 42,
+        "target_expert": 26,
+        "conditional_prob": 0.125,
+        "target_marginal": 0.09505208333333333,
+        "enrichment": 0.02994791666666667,
+        "source_support_selections": 1
+      },
+      {
+        "source_layer_human": 11,
+        "source_expert": 56,
+        "target_expert": 23,
+        "conditional_prob": 0.08928571428571429,
+        "target_marginal": 0.059895833333333336,
+        "enrichment": 0.029389880952380952,
+        "source_support_selections": 7
+      },
+      {
+        "source_layer_human": 7,
+        "source_expert": 42,
+        "target_expert": 48,
+        "conditional_prob": 0.125,
+        "target_marginal": 0.09635416666666667,
+        "enrichment": 0.02864583333333333,
+        "source_support_selections": 1
+      },
+      {
+        "source_layer_human": 8,
+        "source_expert": 2,
+        "target_expert": 51,
+        "conditional_prob": 0.11458333333333333,
+        "target_marginal": 0.08723958333333333,
+        "enrichment": 0.02734375,
+        "source_support_selections": 12
+      },
+      {
+        "source_layer_human": 9,
+        "source_expert": 29,
+        "target_expert": 33,
+        "conditional_prob": 0.11328125,
+        "target_marginal": 0.0859375,
+        "enrichment": 0.02734375,
+        "source_support_selections": 64
+      }
+    ],
+    "note": "Descriptive only: no statistical testing, and these pairs do not contribute to the reported pattern."
+  },
+  "decomposition_pattern": "PATH_DOMINANT",
+  "pattern_detail": {
+    "pattern": "PATH_DOMINANT",
+    "gap_used_for_description": 0.02,
+    "checks": {
+      "id_path_at_least_full": true,
+      "content_at_least_full": false,
+      "id_path_above_content": true,
+      "content_above_id_path": false,
+      "full_above_both": false,
+      "fused_matches_full": false
+    },
+    "note": "Exploratory description under a frozen small-sample pilot, not a hypothesis test. The 0.02 figure is a discussion aid, not a significance threshold."
+  },
+  "pattern_interpretation": "Historical expert-selection path carries most of the signal: which experts were chosen predicts future routing, largely without their activation content.",
+  "reconstruction": {
+    "max_abs": 0.012996673583984375,
+    "max_relative": 0.002515152096748352
+  },
+  "architecture_built": "none",
+  "rescue_modifications": "none",
+  "prior_projects_status": "closed, read-only, results unmodified"
+}

@@ -1,0 +1,90 @@
+{
+  "experiment": "EPD-P0",
+  "host": "dgx1",
+  "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.35",
+  "python": "3.10.19",
+  "python_executable": "/home/h-li/miniconda3/envs/sensorllm/bin/python",
+  "packages": {
+    "torch": "2.4.1+cu121",
+    "torch_cuda": "12.1",
+    "cuda_available": true,
+    "transformers": "4.45.1",
+    "numpy": "1.24.4",
+    "scikit-learn": "1.3.2"
+  },
+  "gpus_detected": [
+    {
+      "index": 0,
+      "name": "Tesla V100-SXM2-32GB",
+      "uuid": "GPU-8345fe84-ea6a-b831-fa7e-2a503d52095b",
+      "memory_total": "32768 MiB",
+      "memory_free": "2061 MiB",
+      "utilization": "0 %"
+    },
+    {
+      "index": 1,
+      "name": "Tesla V100-SXM2-32GB",
+      "uuid": "GPU-a2030603-a260-7b01-2b0b-939de36d2510",
+      "memory_total": "32768 MiB",
+      "memory_free": "20101 MiB",
+      "utilization": "0 %"
+    },
+    {
+      "index": 2,
+      "name": "Tesla V100-SXM2-32GB",
+      "uuid": "GPU-c33f25dc-3e69-576d-9dda-e1e1bbe19e68",
+      "memory_total": "32768 MiB",
+      "memory_free": "32491 MiB",
+      "utilization": "0 %"
+    },
+    {
+      "index": 3,
+      "name": "Tesla V100-SXM2-32GB",
+      "uuid": "GPU-4a30fd44-ccc4-472f-f3fd-d5c30f921ea0",
+      "memory_total": "32768 MiB",
+      "memory_free": "1679 MiB",
+      "utilization": "0 %"
+    },
+    {
+      "index": 4,
+      "name": "Tesla V100-SXM2-32GB",
+      "uuid": "GPU-538aeda6-b409-8b39-88d3-70e2e1541e56",
+      "memory_total": "32768 MiB",
+      "memory_free": "32491 MiB",
+      "utilization": "0 %"
+    },
+    {
+      "index": 5,
+      "name": "Tesla V100-SXM2-32GB",
+      "uuid": "GPU-196b9a40-dc34-602f-d585-8935b2411e00",
+      "memory_total": "32768 MiB",
+      "memory_free": "32491 MiB",
+      "utilization": "0 %"
+    },
+    {
+      "index": 6,
+      "name": "Tesla V100-SXM2-32GB",
+      "uuid": "GPU-36885fae-a6a2-4227-c2da-e21d808ab248",
+      "memory_total": "32768 MiB",
+      "memory_free": "32491 MiB",
+      "utilization": "0 %"
+    },
+    {
+      "index": 7,
+      "name": "Tesla V100-SXM2-32GB",
+      "uuid": "GPU-2d8a8bfa-99bc-a46c-285a-1f1674327835",
+      "memory_total": "32768 MiB",
+      "memory_free": "32491 MiB",
+      "utilization": "0 %"
+    }
+  ],
+  "idle_v100_candidates": [
+    2,
+    4,
+    5,
+    6,
+    7
+  ],
+  "n_shards_required": 4,
+  "gradients_on_olmoe": false
+}
