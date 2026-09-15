@@ -1,0 +1,442 @@
+{
+  "audit_generated": "2026-09-15T14:41:01+0900",
+  "host": "dgx1",
+  "packaging_task": "repository packaging / reproducibility, not a new experiment",
+  "sources_treated_as": "READ-ONLY",
+  "sources_modified": false,
+  "packaging_method": "git archive <frozen sha> | tar -x",
+  "all_sources_clean": true,
+  "all_heads_match_expected": true,
+  "n_repositories": 8,
+  "n_packaged_files_total": 196,
+  "packaged_bytes_total": 7614756,
+  "omitted_bytes_total": 263611042,
+  "max_packaged_file_bytes": 26214400,
+  "git_lfs_used": false,
+  "repositories": [
+    {
+      "slug": "01_redv",
+      "source_repository": "/home/h-li/work/rejected_expert_delayed_value",
+      "experiments": [
+        "REDV-V1",
+        "REDV-V2"
+      ],
+      "head_sha": "910482e4e990a7ad7e792fb9df8b648a2ba37b77",
+      "head_short": "910482e",
+      "expected_short": "910482e",
+      "head_matches_expected": true,
+      "branch": "master",
+      "n_commits": 8,
+      "commit_log": [
+        "910482e untrack regenerable V2 feature caches",
+        "7988430 REDV-V2 formal result and closure",
+        "f3dc29b REDV-V2 implementation and tests",
+        "1892e97 REDV-V2 preregistration: dimension-matched rejected-evidence test",
+        "7964f31 formal result and closure",
+        "6d1c57f implementation and tests",
+        "0d0ce3e REDV-V1 preregistration: rejected-expert delayed-value test",
+        "6d733c5 project scaffold and research charter"
+      ],
+      "git_status_porcelain": [],
+      "working_tree_clean": true,
+      "uncommitted_modifications": false,
+      "canonical_source": "git archive 910482e (frozen commit, not working tree)",
+      "n_tracked_files": 34,
+      "tracked_bytes_total": 306853,
+      "largest_tracked_file": [
+        "artifacts/REDV_V2/data_manifest.json",
+        110619
+      ],
+      "result_and_protocol_files": [
+        "artifacts/REDV_V1/RESULTS.md",
+        "artifacts/REDV_V1/data_manifest.json",
+        "artifacts/REDV_V1/environment.json",
+        "artifacts/REDV_V1/model_provenance.json",
+        "artifacts/REDV_V1/results.json",
+        "artifacts/REDV_V2/RESULTS.md",
+        "artifacts/REDV_V2/data_manifest.json",
+        "artifacts/REDV_V2/environment.json",
+        "artifacts/REDV_V2/model_provenance.json",
+        "artifacts/REDV_V2/results.json",
+        "protocols/REDV_V1_PREREGISTRATION.md",
+        "protocols/REDV_V2_PREREGISTRATION.md"
+      ],
+      "n_packaged_files": 34,
+      "packaged_bytes_total": 306853,
+      "large_artifacts_omitted": [
+        {
+          "path": "artifacts/REDV_V2/fit_features.npz",
+          "bytes": 38488901,
+          "sha256": "546f6dd4495fc1ff12b11db7ef79e6064dd4d53515b1168d5b4fcb26e9683f85"
+        },
+        {
+          "path": "artifacts/REDV_V2/test_features.npz",
+          "bytes": 38484343,
+          "sha256": "c654d1a8253fa55e8afc700dbba45d63e5b6df681a941036fc2e1a7de2a57883"
+        },
+        {
+          "path": "artifacts/REDV_V1/test_features.npz",
+          "bytes": 19256745,
+          "sha256": "b28ea83f3817595fedbc1091eca272e473f293c0b653e63ad44c670f14e36d56"
+        },
+        {
+          "path": "artifacts/REDV_V1/validation_features.npz",
+          "bytes": 19255764,
+          "sha256": "90c1313f6791e010bdf162bcc7d56d501809d3b7da93a74d6bd5f5e0f35cdcca"
+        }
+      ],
+      "omitted_bytes_total": 115485753
+    },
+    {
+      "slug": "02_drev",
+      "source_repository": "/home/h-li/work/delayed_rejected_evidence",
+      "experiments": [
+        "DREV-P0"
+      ],
+      "head_sha": "4cce387df1cc5f62989417f7882f33f905e09d47",
+      "head_short": "4cce387",
+      "expected_short": "4cce387",
+      "head_matches_expected": true,
+      "branch": "master",
+      "n_commits": 4,
+      "commit_log": [
+        "4cce387 formal result and closure",
+        "28f166d implementation and tests",
+        "a88835a DREV-P0 preregistration: delayed rejected-evidence pilot",
+        "3313b80 scaffold and research charter"
+      ],
+      "git_status_porcelain": [],
+      "working_tree_clean": true,
+      "uncommitted_modifications": false,
+      "canonical_source": "git archive 4cce387 (frozen commit, not working tree)",
+      "n_tracked_files": 32,
+      "tracked_bytes_total": 176286,
+      "largest_tracked_file": [
+        "artifacts/DREV_P0/data_manifest.json",
+        55984
+      ],
+      "result_and_protocol_files": [
+        "artifacts/DREV_P0/RESULTS.md",
+        "artifacts/DREV_P0/data_manifest.json",
+        "artifacts/DREV_P0/environment.json",
+        "artifacts/DREV_P0/model_provenance.json",
+        "artifacts/DREV_P0/results.json",
+        "protocols/DREV_P0_PREREGISTRATION.md"
+      ],
+      "n_packaged_files": 32,
+      "packaged_bytes_total": 176286,
+      "large_artifacts_omitted": [
+        {
+          "path": "artifacts/DREV_P0/source_test.npz",
+          "bytes": 6424881,
+          "sha256": "f2fbad596e2162698dfe98ee6b4d8249a19ce1a2e0676f69be1251a5552624cc"
+        },
+        {
+          "path": "artifacts/DREV_P0/source_fit.npz",
+          "bytes": 6419957,
+          "sha256": "8cbef264c1663b456e719c5627490e21f6d46617a0ae4592fdb80ddf01c7f195"
+        }
+      ],
+      "omitted_bytes_total": 12844838
+    },
+    {
+      "slug": "03_eipc",
+      "source_repository": "/home/h-li/work/expert_identity_preservation",
+      "experiments": [
+        "EIPC-P0"
+      ],
+      "head_sha": "517f74edb05d50b9d512248eeff2b5864afc59af",
+      "head_short": "517f74e",
+      "expected_short": "517f74e",
+      "head_matches_expected": true,
+      "branch": "master",
+      "n_commits": 4,
+      "commit_log": [
+        "517f74e formal result and closure",
+        "351c4d0 implementation and tests",
+        "04c48a3 EIPC-P0 preregistration and frozen data manifest",
+        "f27ff22 scaffold and research charter"
+      ],
+      "git_status_porcelain": [],
+      "working_tree_clean": true,
+      "uncommitted_modifications": false,
+      "canonical_source": "git archive 517f74e (frozen commit, not working tree)",
+      "n_tracked_files": 28,
+      "tracked_bytes_total": 202375,
+      "largest_tracked_file": [
+        "artifacts/EIPC_P0/data_manifest.json",
+        80802
+      ],
+      "result_and_protocol_files": [
+        "artifacts/EIPC_P0/RESULTS.md",
+        "artifacts/EIPC_P0/data_manifest.json",
+        "artifacts/EIPC_P0/environment.json",
+        "artifacts/EIPC_P0/model_provenance.json",
+        "artifacts/EIPC_P0/results.json",
+        "protocols/EIPC_P0_PREREGISTRATION.md"
+      ],
+      "n_packaged_files": 28,
+      "packaged_bytes_total": 202375,
+      "large_artifacts_omitted": [
+        {
+          "path": "artifacts/EIPC_P0/test_raw.npz",
+          "bytes": 11476809,
+          "sha256": "088e0a06982ea5bdb637cedceeafcce51921e111cb7bd6c00c3edb4ce42d36b9"
+        },
+        {
+          "path": "artifacts/EIPC_P0/fit_raw.npz",
+          "bytes": 11474244,
+          "sha256": "379fe7d3d0c14723f3c5d1f898f63e75450c551bdb10430d742e3302c4cf9a43"
+        }
+      ],
+      "omitted_bytes_total": 22951053
+    },
+    {
+      "slug": "04_xec",
+      "source_repository": "/home/h-li/work/cross_layer_expert_cache",
+      "experiments": [
+        "XEC-P0"
+      ],
+      "head_sha": "a664cb5de30900119453d25eba2c4034bfef7b05",
+      "head_short": "a664cb5",
+      "expected_short": "a664cb5",
+      "head_matches_expected": true,
+      "branch": "master",
+      "n_commits": 4,
+      "commit_log": [
+        "a664cb5 formal result and closure",
+        "65b4603 implementation and tests",
+        "b39e594 XEC-P0 preregistration and frozen manifest",
+        "491da9f scaffold and research charter"
+      ],
+      "git_status_porcelain": [],
+      "working_tree_clean": true,
+      "uncommitted_modifications": false,
+      "canonical_source": "git archive a664cb5 (frozen commit, not working tree)",
+      "n_tracked_files": 42,
+      "tracked_bytes_total": 5855552,
+      "largest_tracked_file": [
+        "artifacts/XEC_P0/checkpoints/CURRENT_ONLY_seed2026.pt",
+        616768
+      ],
+      "result_and_protocol_files": [
+        "artifacts/XEC_P0/RESULTS.md",
+        "artifacts/XEC_P0/data_manifest.json",
+        "artifacts/XEC_P0/environment.json",
+        "artifacts/XEC_P0/model_provenance.json",
+        "artifacts/XEC_P0/results.json",
+        "protocols/XEC_P0_PREREGISTRATION.md"
+      ],
+      "n_packaged_files": 42,
+      "packaged_bytes_total": 5855552,
+      "large_artifacts_omitted": [
+        {
+          "path": "artifacts/XEC_P0/train_features.npz",
+          "bytes": 54405353,
+          "sha256": "df79814e9d91a2066bded4c61fa9866c46f8262a9020fdb9b5418727fc5d19bb"
+        },
+        {
+          "path": "artifacts/XEC_P0/test_features.npz",
+          "bytes": 27201555,
+          "sha256": "4bc771f893ae48bb8712599100570e5920c41249faacf2db1434a205f997632c"
+        },
+        {
+          "path": "artifacts/XEC_P0/validation_features.npz",
+          "bytes": 13607589,
+          "sha256": "45a09ec67e936a4e18fe314a590c038df19dd5e473248c4f64a4d7eea7faa35a"
+        }
+      ],
+      "omitted_bytes_total": 95214497
+    },
+    {
+      "slug": "05_epd",
+      "source_repository": "/home/h-li/work/expert_provenance_decomposition",
+      "experiments": [
+        "EPD-P0"
+      ],
+      "head_sha": "995d23ebb2cc37772b38abefc8d16d1af35586e3",
+      "head_short": "995d23e",
+      "expected_short": "995d23e",
+      "head_matches_expected": true,
+      "branch": "master",
+      "n_commits": 4,
+      "commit_log": [
+        "995d23e exploratory result",
+        "949d737 implementation and tests",
+        "a1a6983 frozen fresh-data manifest",
+        "6556d29 scaffold and protocol"
+      ],
+      "git_status_porcelain": [],
+      "working_tree_clean": true,
+      "uncommitted_modifications": false,
+      "canonical_source": "git archive 995d23e (frozen commit, not working tree)",
+      "n_tracked_files": 23,
+      "tracked_bytes_total": 166102,
+      "largest_tracked_file": [
+        "artifacts/EPD_P0/data_manifest.json",
+        39173
+      ],
+      "result_and_protocol_files": [
+        "artifacts/EPD_P0/RESULTS.md",
+        "artifacts/EPD_P0/data_manifest.json",
+        "artifacts/EPD_P0/environment.json",
+        "artifacts/EPD_P0/model_provenance.json",
+        "artifacts/EPD_P0/results.json",
+        "protocols/EPD_P0_PROTOCOL.md"
+      ],
+      "n_packaged_files": 23,
+      "packaged_bytes_total": 166102,
+      "large_artifacts_omitted": [
+        {
+          "path": "artifacts/EPD_P0/merged_raw.npz",
+          "bytes": 8551137,
+          "sha256": "39c9b609d89d7fe568e88221b35bdcba6f686e4cec7af1ba1cdd76527d030442"
+        },
+        {
+          "path": "artifacts/EPD_P0/shard_1.npz",
+          "bytes": 2141366,
+          "sha256": "42d05fe99010e4c6903de4b209f122ae5f58bf5d178ee0ca36d6606cd32ce31b"
+        },
+        {
+          "path": "artifacts/EPD_P0/shard_3.npz",
+          "bytes": 2141125,
+          "sha256": "590d974a2cd8a2644b59ea0f02e977493bd84c8f39b195e782285ec0bf800c0c"
+        },
+        {
+          "path": "artifacts/EPD_P0/shard_2.npz",
+          "bytes": 2140990,
+          "sha256": "f9820d78864c029167f32199ae0be4023242876b8f187b080962a6254748cd30"
+        },
+        {
+          "path": "artifacts/EPD_P0/shard_0.npz",
+          "bytes": 2140283,
+          "sha256": "690e9ffe2e624830df18356fbd2150ed6a47ba5c4f7f259b9ce7f67b6a55675c"
+        }
+      ],
+      "omitted_bytes_total": 17114901
+    },
+    {
+      "slug": "06_rmo",
+      "source_repository": "/home/h-li/work/routing_markov_order",
+      "experiments": [
+        "RMO-P0"
+      ],
+      "head_sha": "a8e9d83cc2a6dd4800db72e610bd010ff80a83bb",
+      "head_short": "a8e9d83",
+      "expected_short": "a8e9d83",
+      "head_matches_expected": true,
+      "branch": "master",
+      "n_commits": 3,
+      "commit_log": [
+        "a8e9d83 RMO-P0 result and closure",
+        "07f0854 RMO-P0 implementation and tests",
+        "3b70f14 RMO-P0 frozen exploratory protocol"
+      ],
+      "git_status_porcelain": [],
+      "working_tree_clean": true,
+      "uncommitted_modifications": false,
+      "canonical_source": "git archive a8e9d83 (frozen commit, not working tree)",
+      "n_tracked_files": 7,
+      "tracked_bytes_total": 61151,
+      "largest_tracked_file": [
+        "test_analysis.py",
+        19866
+      ],
+      "result_and_protocol_files": [
+        "artifacts/RESULTS.md",
+        "artifacts/results.json",
+        "protocol.md"
+      ],
+      "n_packaged_files": 7,
+      "packaged_bytes_total": 61151,
+      "large_artifacts_omitted": [],
+      "omitted_bytes_total": 0
+    },
+    {
+      "slug": "07_rmc",
+      "source_repository": "/home/h-li/work/routing_memory_crossmodel",
+      "experiments": [
+        "RMC-P0"
+      ],
+      "head_sha": "cc60edd9313c15c9a0f433d9f897a38fb44ef1a3",
+      "head_short": "cc60edd",
+      "expected_short": "cc60edd",
+      "head_matches_expected": true,
+      "branch": "master",
+      "n_commits": 3,
+      "commit_log": [
+        "cc60edd RMC-P0 result and closure",
+        "85013f5 RMC-P0 implementation and tests",
+        "f4924dc RMC-P0 preregistration and frozen provenance"
+      ],
+      "git_status_porcelain": [],
+      "working_tree_clean": true,
+      "uncommitted_modifications": false,
+      "canonical_source": "git archive cc60edd (frozen commit, not working tree)",
+      "n_tracked_files": 21,
+      "tracked_bytes_total": 750578,
+      "largest_tracked_file": [
+        "artifacts/merged.npz",
+        311096
+      ],
+      "result_and_protocol_files": [
+        "artifacts/RESULTS.md",
+        "artifacts/data_manifest.json",
+        "artifacts/environment.json",
+        "artifacts/model_provenance.json",
+        "artifacts/results.json",
+        "artifacts/router_identification.json",
+        "protocol.md"
+      ],
+      "n_packaged_files": 21,
+      "packaged_bytes_total": 750578,
+      "large_artifacts_omitted": [],
+      "omitted_bytes_total": 0
+    },
+    {
+      "slug": "08_nhd",
+      "source_repository": "/home/h-li/work/nonlinear_history_decoding",
+      "experiments": [
+        "NHD-P0"
+      ],
+      "head_sha": "f1a7d4ab9313798a20297921dd8a8125dee71763",
+      "head_short": "f1a7d4a",
+      "expected_short": "f1a7d4a",
+      "head_matches_expected": true,
+      "branch": "master",
+      "n_commits": 3,
+      "commit_log": [
+        "f1a7d4a NHD-P0 result and closure",
+        "973bbf8 NHD-P0 implementation and tests",
+        "cc45fa4 NHD-P0 frozen protocol and source-artifact verification"
+      ],
+      "git_status_porcelain": [],
+      "working_tree_clean": true,
+      "uncommitted_modifications": false,
+      "canonical_source": "git archive f1a7d4a (frozen commit, not working tree)",
+      "n_tracked_files": 9,
+      "tracked_bytes_total": 95859,
+      "largest_tracked_file": [
+        "test_nhd.py",
+        31828
+      ],
+      "result_and_protocol_files": [
+        "artifacts/RESULTS.md",
+        "artifacts/results.json",
+        "artifacts/source_verification.json",
+        "protocol.md"
+      ],
+      "n_packaged_files": 9,
+      "packaged_bytes_total": 95859,
+      "large_artifacts_omitted": [],
+      "omitted_bytes_total": 0
+    }
+  ],
+  "excluded_projects": [
+    "SensorLLM",
+    "video-language H2",
+    "MSR-VTT",
+    "wristmotion-3act",
+    "intervention_relation_learning"
+  ]
+}
